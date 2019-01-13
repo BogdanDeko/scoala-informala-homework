@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Exercitiul4.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #629755; font-style: italic;}
+.s3 { color: #629755; font-weight: bold; font-style: italic;}
+.s4 { color: #6a8759;}
+.s5 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Exercitiul4.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java.util.Scanner</span><span class="s0">;</span>
+
+<span class="s2">/**</span>
+ * <span class="s3">@author </span><span class="s2">Bogdan</span>
+ *
+ * Check if a number is palindrome (e.g. 1221, 34143).
+ */
+<span class="s0">public class </span><span class="s1">Exercitiul4 {</span>
+    <span class="s0">public static void </span><span class="s1">main (String[] args) {</span>
+        System.out.println(<span class="s4">&quot;Enter a number: &quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">Scanner read = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">;</span>
+        int <span class="s1">num = read.nextInt()</span><span class="s0">;</span>
+        int <span class="s1">n = num</span><span class="s0">;</span>
+        int <span class="s1">rev = </span><span class="s5">0</span><span class="s0">, </span><span class="s1">i</span><span class="s0">;</span>
+        while <span class="s1">(num &gt; </span><span class="s5">0</span><span class="s1">) {</span>
+            i = num % <span class="s5">10</span><span class="s0">;</span>
+            <span class="s1">rev = rev * </span><span class="s5">10 </span><span class="s1">+ i</span><span class="s0">;</span>
+            <span class="s1">num = num / </span><span class="s5">10</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(rev == n)</span>
+            System.out.println(n + <span class="s4">&quot;is a Palindrome number&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        else
+            <span class="s1">System.out.println(n + </span><span class="s4">&quot;is not a palindrome number&quot;</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+}
+</pre>
+</body>
+</html>
