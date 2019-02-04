@@ -1,3 +1,5 @@
+package Exercitiul2;
+
 import java.util.Scanner;
 
 /**
@@ -12,23 +14,17 @@ import java.util.Scanner;
  * @author Bogdan
  */
 
-public class Exercitiul2 {
-    public static void main(String arg[]) {
-        Double f, c;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the Fahrenheit temperature: ");
-        f = sc.nextDouble();
-        c = (f - 32) * 5 / 9;
+public class Main {
 
-        if (c >= 37) ;
-        {
-            System.err.println("You are ill!");
-        }
-//            else if (c <= 10); {
-//            System.err.println("You are dead!");
-//        }
-        {
-            System.out.println("Your body temperature in Celsius degrees is = " + c);
-        }
+    public static void main(String[] args) {
+
+        Implementations temp = new Implementations();
+        System.out.println("Enter the body temperature: ");
+        Scanner sc = new Scanner(System.in);
+
+        double fahrenheit = sc.nextDouble();
+        System.out.println("Your body temperature in Celsius degrees is: "
+                + fahrenheit + "F = " + temp.getTempInCelsius(fahrenheit) + "C");
+
     }
 }
