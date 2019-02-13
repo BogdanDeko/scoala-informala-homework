@@ -1,6 +1,4 @@
-import java.text.DecimalFormat;
-import java.util.Scanner;
-
+package Exercitiul3;
 /**
  * Input Data Validation
  * Write a program that asks the user what time it is, by printing on the console
@@ -11,23 +9,26 @@ import java.util.Scanner;
  *
  * @author Bogdan
  */
-public class Exercitiul3 {
 
+public class TestTime {
     public static void main(String[] args) {
-        int h, m;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("What time is it?");
-        System.out.println("Insert the hour: hh:mm");
-        h = sc.nextInt();
-        m = sc.nextInt();
 
-        String strh = String.format("%02d",h);
-        String strm = String.format("%02d",m);
+        Time t1 = new Time(3, 2, 1);
+        System.out.println(t1);
 
-        if ((h <= 23) && (m <= 59)) {
-            System.out.println("The time is: " + strh + ":" + strm + " now!");
-        } else {
-            System.out.println("Incorrect time!");
+        Time t2 = new Time(59, 59, 23);
+        System.out.println(t2);
+        System.out.println(t2.nextSecond().nextSecond().nextSecond());
+
+        try {
+            Time t3 = new Time(60, 59, 12);  // throw IllegalArgumentException
+
+            System.out.println(t3);
+
+        } catch (IllegalArgumentException ex) {
+
+            ex.printStackTrace();
         }
+        System.out.println("Continue after exception!");
     }
 }
