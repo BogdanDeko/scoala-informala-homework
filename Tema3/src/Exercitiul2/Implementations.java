@@ -5,22 +5,15 @@ package Exercitiul2;
      private double bodyTemp;
 
      public double getTempInCelsius(double farenheit) {
-         if (farenheit <= 98.6) {
-             return ((farenheit - 32.0) * 5) / 9;
-         } else {
-             throw new IllegalArgumentException("You are ill!");
+         try {
+             if (farenheit <= 98.6) {
+                 return ((farenheit - 32.0) * 5) / 9;
+             } else {
+                 throw new IllegalArgumentException("You are ill!");
+             }
+         } catch (Exception e) {
+             System.out.println("Enter valid temperature");
          }
+         return this.bodyTemp;
      }
  }
-
-
-//     public double setTemp(double celsius) {
-//         if (celsius <= 37) {
-//             return ((farenheit - 32.0) * 5) / 9;
-//         } else {
-//             throw new IllegalArgumentException("You are ill!");
-//         }
-//     }
-// }
-//
-//                 return this.bodytemp = bodyCelsius;

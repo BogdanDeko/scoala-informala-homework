@@ -1,5 +1,4 @@
 package Exercitiul2;
-
 import java.util.Scanner;
 
 /**
@@ -17,14 +16,17 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        try (Scanner sc = new Scanner(System.in)) {
 
-        Implementations temp = new Implementations();
-        System.out.println("Enter the body temperature: ");
-        Scanner sc = new Scanner(System.in);
+            Implementations temp = new Implementations();
+            System.out.println("Enter the body temperature: ");
 
-        double fahrenheit = sc.nextDouble();
-        System.out.println("Your body temperature in Celsius degrees is: "
-                + fahrenheit + "F = " + temp.getTempInCelsius(fahrenheit) + "C");
 
+            double fahrenheit = sc.nextDouble();
+            System.out.println("Your body temperature in Celsius degrees is: "
+                    + fahrenheit + "F = " + temp.getTempInCelsius(fahrenheit) + "C");
+        } catch (NullPointerException e) {
+            System.out.println("Enter a value");
+        }
     }
 }

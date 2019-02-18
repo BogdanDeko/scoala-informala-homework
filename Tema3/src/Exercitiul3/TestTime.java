@@ -1,4 +1,7 @@
 package Exercitiul3;
+
+import javax.xml.bind.ValidationException;
+
 /**
  * Input Data Validation
  * Write a program that asks the user what time it is, by printing on the console
@@ -26,7 +29,6 @@ public class TestTime {
             System.out.println(t3);
 
         } catch (IllegalArgumentException ex) {
-
             ex.printStackTrace();
         }
         System.out.println("Continue after exception!");
